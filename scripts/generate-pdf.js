@@ -90,6 +90,7 @@ const EDITIONS = [
 
   // Individual-contributor editions (Editorial design) — 2026-10.
   { id: 'senior-software-engineer', html: 'versions/2026-10-senior-software-engineer/index.html', pdf: 'versions/2026-10-senior-software-engineer/Ahmad_Senior_Software_Engineer_Resume.pdf', media: 'print', margin: 0, loc: true },
+  { id: 'fullstack-engineer',       html: 'versions/2026-10-fullstack-engineer/index.html',       pdf: 'versions/2026-10-fullstack-engineer/Ahmad_Fullstack_Engineer_Resume.pdf',             media: 'print', margin: 0, loc: true },
 
   // Terminal-design twins (linked from each editorial edition's "live interactive" CTA).
   { id: 'ios-terminal',    html: 'versions/2026-07-ios-terminal/index.html',    pdf: 'versions/2026-07-ios-terminal/Ahmad_iOS_Terminal_Resume.pdf',       media: 'screen', margin: 9 },
@@ -99,6 +100,7 @@ const EDITIONS = [
   { id: 'technical-lead-terminal',   html: 'versions/2026-08-technical-lead-terminal/index.html',   pdf: 'versions/2026-08-technical-lead-terminal/Ahmad_Technical_Lead_Terminal_Resume.pdf',     media: 'screen', margin: 9 },
   { id: 'founding-cto-terminal',     html: 'versions/2026-08-founding-cto-terminal/index.html',     pdf: 'versions/2026-08-founding-cto-terminal/Ahmad_Founding_CTO_Terminal_Resume.pdf',         media: 'screen', margin: 9 },
   { id: 'senior-software-engineer-terminal', html: 'versions/2026-10-senior-software-engineer-terminal/index.html', pdf: 'versions/2026-10-senior-software-engineer-terminal/Ahmad_Senior_Software_Engineer_Terminal_Resume.pdf', media: 'screen', margin: 9 },
+  { id: 'fullstack-engineer-terminal',       html: 'versions/2026-10-fullstack-engineer-terminal/index.html',       pdf: 'versions/2026-10-fullstack-engineer-terminal/Ahmad_Fullstack_Engineer_Terminal_Resume.pdf',             media: 'screen', margin: 9 },
 ];
 
 async function exportEdition(browser, job) {

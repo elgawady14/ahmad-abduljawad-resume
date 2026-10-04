@@ -62,7 +62,7 @@ Each page 1 is packed top-to-bottom — no blank space.
 
 ## Individual-contributor editions (2026-10, Editorial design)
 
-Hands-on editions for engineering roles that are not leadership titles. Same career facts and
+Two hands-on editions for engineering roles that are not leadership titles. Same career facts and
 design; the stat band, the opening paragraph and § 01 are rebuilt for an engineer's reader, and the
 ride-hailing platform figures were re-measured from the source repos on 4 Oct 2026 (23 backend
 modules, ~320 endpoints, 2,900+ backend tests, 800+ iOS tests, four native clients).
@@ -70,9 +70,11 @@ modules, ~320 endpoints, 2,900+ backend tests, 800+ iOS tests, four native clien
 | Title | Folder | § 01 section | PDF |
 |-------|--------|--------------|-----|
 | **Senior Software Engineer** | [`2026-10-senior-software-engineer/`](./2026-10-senior-software-engineer/) | *How I Engineer* — systems design, measurable quality, modernising in flight, end-to-end ownership | `Ahmad_Senior_Software_Engineer_Resume.pdf` |
+| **Full-Stack Engineer** | [`2026-10-fullstack-engineer/`](./2026-10-fullstack-engineer/) | *Across the Stack* — backend &amp; data, realtime &amp; integrations, web, mobile clients | `Ahmad_Fullstack_Engineer_Resume.pdf` |
 
 The **Senior Software Engineer** edition keeps Marn first (engineering bullets lead, leadership
-last). It has a terminal twin at `2026-10-<title>-terminal/`
+last). The **Full-Stack Engineer** edition puts the ride-hailing platform first, because the
+backend and web work is the credential. Each has a terminal twin at `2026-10-<title>-terminal/`
 and exports a Riyadh + Cairo PDF.
 
 ## Location: Riyadh / Cairo

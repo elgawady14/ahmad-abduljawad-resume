@@ -27,6 +27,7 @@ you change an `index.html`, you regenerate the PDFs with one command.
 | `technical-lead`            | `versions/2026-08-technical-lead/index.html`        | `versions/2026-08-technical-lead/Ahmad_Technical_Lead_Resume.pdf`                             | `print`    | 0 mm   |
 | `founding-cto`              | `versions/2026-08-founding-cto/index.html`          | `versions/2026-08-founding-cto/Ahmad_Founding_CTO_Resume.pdf`                                 | `print`    | 0 mm   |
 | `senior-software-engineer`  | `versions/2026-10-senior-software-engineer/index.html` | `versions/2026-10-senior-software-engineer/Ahmad_Senior_Software_Engineer_Resume.pdf`     | `print`    | 0 mm   |
+| `fullstack-engineer`        | `versions/2026-10-fullstack-engineer/index.html`    | `versions/2026-10-fullstack-engineer/Ahmad_Fullstack_Engineer_Resume.pdf`                     | `print`    | 0 mm   |
 | `ios-terminal`              | `versions/2026-07-ios-terminal/index.html`          | `versions/2026-07-ios-terminal/Ahmad_iOS_Terminal_Resume.pdf`                                 | `screen`   | 9 mm   |
 | `mobile-terminal`           | `versions/2026-07-mobile-terminal/index.html`       | `versions/2026-07-mobile-terminal/Ahmad_Mobile_Terminal_Resume.pdf`                           | `screen`   | 9 mm   |
 | `cto-terminal`              | `versions/2026-08-cto-terminal/index.html`          | `versions/2026-08-cto-terminal/Ahmad_CTO_Terminal_Resume.pdf`                                 | `screen`   | 9 mm   |
@@ -34,6 +35,7 @@ you change an `index.html`, you regenerate the PDFs with one command.
 | `technical-lead-terminal`   | `versions/2026-08-technical-lead-terminal/index.html`   | `versions/2026-08-technical-lead-terminal/Ahmad_Technical_Lead_Terminal_Resume.pdf`       | `screen`   | 9 mm   |
 | `founding-cto-terminal`     | `versions/2026-08-founding-cto-terminal/index.html`     | `versions/2026-08-founding-cto-terminal/Ahmad_Founding_CTO_Terminal_Resume.pdf`           | `screen`   | 9 mm   |
 | `senior-software-engineer-terminal` | `versions/2026-10-senior-software-engineer-terminal/index.html` | `versions/2026-10-senior-software-engineer-terminal/Ahmad_Senior_Software_Engineer_Terminal_Resume.pdf` | `screen` | 9 mm |
+| `fullstack-engineer-terminal` | `versions/2026-10-fullstack-engineer-terminal/index.html` | `versions/2026-10-fullstack-engineer-terminal/Ahmad_Fullstack_Engineer_Terminal_Resume.pdf` | `screen` | 9 mm |
 
 Editions marked `loc: true` in the script (every editorial/swiss one) export **twice**:
 the default file (Riyadh) and a `…_Cairo_Resume.pdf` twin.
