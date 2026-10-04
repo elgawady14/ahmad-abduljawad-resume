@@ -88,6 +88,9 @@ const EDITIONS = [
   { id: 'technical-lead',   html: 'versions/2026-08-technical-lead/index.html',   pdf: 'versions/2026-08-technical-lead/Ahmad_Technical_Lead_Resume.pdf',     media: 'print', margin: 0, loc: true },
   { id: 'founding-cto',     html: 'versions/2026-08-founding-cto/index.html',     pdf: 'versions/2026-08-founding-cto/Ahmad_Founding_CTO_Resume.pdf',         media: 'print', margin: 0, loc: true },
 
+  // Individual-contributor editions (Editorial design) — 2026-10.
+  { id: 'senior-software-engineer', html: 'versions/2026-10-senior-software-engineer/index.html', pdf: 'versions/2026-10-senior-software-engineer/Ahmad_Senior_Software_Engineer_Resume.pdf', media: 'print', margin: 0, loc: true },
+
   // Terminal-design twins (linked from each editorial edition's "live interactive" CTA).
   { id: 'ios-terminal',    html: 'versions/2026-07-ios-terminal/index.html',    pdf: 'versions/2026-07-ios-terminal/Ahmad_iOS_Terminal_Resume.pdf',       media: 'screen', margin: 9 },
   { id: 'mobile-terminal', html: 'versions/2026-07-mobile-terminal/index.html', pdf: 'versions/2026-07-mobile-terminal/Ahmad_Mobile_Terminal_Resume.pdf', media: 'screen', margin: 9 },
@@ -95,6 +98,7 @@ const EDITIONS = [
   { id: 'engineering-lead-terminal', html: 'versions/2026-08-engineering-lead-terminal/index.html', pdf: 'versions/2026-08-engineering-lead-terminal/Ahmad_Engineering_Lead_Terminal_Resume.pdf', media: 'screen', margin: 9 },
   { id: 'technical-lead-terminal',   html: 'versions/2026-08-technical-lead-terminal/index.html',   pdf: 'versions/2026-08-technical-lead-terminal/Ahmad_Technical_Lead_Terminal_Resume.pdf',     media: 'screen', margin: 9 },
   { id: 'founding-cto-terminal',     html: 'versions/2026-08-founding-cto-terminal/index.html',     pdf: 'versions/2026-08-founding-cto-terminal/Ahmad_Founding_CTO_Terminal_Resume.pdf',         media: 'screen', margin: 9 },
+  { id: 'senior-software-engineer-terminal', html: 'versions/2026-10-senior-software-engineer-terminal/index.html', pdf: 'versions/2026-10-senior-software-engineer-terminal/Ahmad_Senior_Software_Engineer_Terminal_Resume.pdf', media: 'screen', margin: 9 },
 ];
 
 async function exportEdition(browser, job) {

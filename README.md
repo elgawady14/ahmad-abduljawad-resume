@@ -76,6 +76,7 @@ for. Every edition exports a Riyadh (default) and a Cairo PDF; see [`versions/`]
 | **Engineering Lead · Engineering Manager** | [`versions/2026-08-engineering-lead/`](./versions/2026-08-engineering-lead/) | `Ahmad_Engineering_Lead_Resume.pdf` |
 | **Technical Lead · Staff Engineer · Architect** | [`versions/2026-08-technical-lead/`](./versions/2026-08-technical-lead/) | `Ahmad_Technical_Lead_Resume.pdf` |
 | **Founding Engineer · Founding CTO** (early-stage) | [`versions/2026-08-founding-cto/`](./versions/2026-08-founding-cto/) | `Ahmad_Founding_CTO_Resume.pdf` |
+| **Senior Software Engineer** (hands-on, iOS · Android · Backend) | [`versions/2026-10-senior-software-engineer/`](./versions/2026-10-senior-software-engineer/) | `Ahmad_Senior_Software_Engineer_Resume.pdf` |
 
 Each also has a dark "terminal" twin at `<edition>-terminal/` for sending as a live link.
 
@@ -119,4 +120,4 @@ This resume is automatically deployed via GitHub Pages at:
 
 ---
 
-*Last Updated: August 2026 | Built with ❤️ and modern web technologies*
+*Last Updated: October 2026 | Built with ❤️ and modern web technologies*
