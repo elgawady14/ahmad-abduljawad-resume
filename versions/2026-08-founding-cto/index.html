@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmad Abdul-Jawad Mahmoud — Founding Engineer · Founding CTO · Zero to One</title>
-    <meta name="description" content="Founding engineer / founding CTO — 12+ years building, 8+ leading. Currently building a production ride-hailing platform solo across four layers: NestJS/PostgreSQL backend and Next.js ops console in production, native iOS and Android clients in development. Previously led a 5+ engineer iOS team for seven years on a POS platform serving 20k+ businesses."
+    <title>Ahmad Abdul-Jawad Mahmoud — Founder &amp; CTO, Buraq · Founding Engineer · Zero to One</title>
+    <meta name="description" content="Founder &amp; CTO of Buraq (buraqegypt.com), an Egyptian ride-hailing platform built solo from an empty repo: NestJS/PostgreSQL backend, Next.js operations console, rider and captain apps on iOS and Android, and the public web app live at buraqegypt.com — 3,100+ commits across nine repositories. 12+ years in engineering, 8+ leading; previously led a 5+ engineer iOS team for seven years on a POS platform serving 20k+ businesses."
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -269,6 +269,14 @@
         }
         .live-link .arr { margin-left: 1px; transition: transform 0.25s ease; }
         .live-link:hover .arr { transform: translate(2px,-2px); }
+
+        /* masthead link row: the live edition + the venture */
+        .live-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+        .live-row .live-link { margin-top: 0; }
+        .live-link.venture { color: var(--ink); border-color: var(--ink); }
+        .live-link.venture .mark { color: var(--ochre); font-size: 10px; }
+        .live-link.venture:hover { background: var(--ink); color: var(--paper); }
+        .live-link.venture:hover .mark { color: var(--paper); }
 
         /* ============================================================
            LEAD / SUMMARY
@@ -889,8 +897,8 @@
 
         <!-- ===================== MASTHEAD ===================== -->
         <div class="dateline reveal d1">
-            <span class="edition">No. 17 · Vol. Zero to One</span>
-            <span>Curriculum Vitæ — The Builder’s Record</span>
+            <span class="edition">No. 18 · Vol. Zero to One</span>
+            <span>Curriculum Vitæ — The Founder’s Record</span>
             <span>Est. MMXIV</span>
         </div>
 
@@ -901,13 +909,13 @@
                     <span class="family">Mahmoud</span>
                 </h1>
                 <div class="role-bar">
-                    <div class="role">Founding Engineer <span class="sep">/</span> Founding CTO <span class="sep">/</span> Technical Lead</div>
-                    <div class="tenure">Cairo ⟶ Riyadh · Builds the First Version Himself</div>
+                    <div class="role">Founder &amp; CTO, Buraq <span class="sep">/</span> Founding Engineer <span class="sep">/</span> Technical Lead</div>
+                    <div class="tenure">Cairo ⟶ Riyadh · Builds the Company and Its First Version</div>
                 </div>
             </div>
             <figure class="portrait">
                 <img src="assets/portrait.jpg" alt="Portrait of Ahmad Abdul-Jawad Mahmoud">
-                <figcaption class="cap"><span>Founding Engineer</span><b>EST. 2014</b></figcaption>
+                <figcaption class="cap"><span>Founder &amp; CTO</span><b>EST. 2014</b></figcaption>
             </figure>
         </header>
 
@@ -926,21 +934,27 @@
             </a>
         </nav>
 
-        <a class="live-link reveal d2" href="https://elgawady14.github.io/ahmad-ios-resume/versions/2026-08-founding-cto-terminal/" target="_blank" rel="noopener">
-            <span class="pulse"></span> See the live interactive edition <span class="arr">↗</span>
-        </a>
+        <div class="live-row reveal d2">
+            <a class="live-link" href="https://elgawady14.github.io/ahmad-ios-resume/versions/2026-08-founding-cto-terminal/" target="_blank" rel="noopener">
+                <span class="pulse"></span> See the live interactive edition <span class="arr">↗</span>
+            </a>
+            <a class="live-link venture" href="https://buraqegypt.com" target="_blank" rel="noopener">
+                <span class="mark">◆</span> Buraq — buraqegypt.com <span class="arr">↗</span>
+            </a>
+        </div>
 
         <!-- ===================== LEAD ===================== -->
         <p class="lead reveal d2">
-            <span class="drop">I</span> build the first version myself. Right now I'm architecting and building a
-            production ride-hailing platform <strong>solo, across four layers</strong> — a hardened
-            NestJS / PostgreSQL / Redis backend and a Next.js operations console
-            <span class="underline">already in production</span>, with native iOS and Android clients
-            in active development. Empty repo to running system: data model, dispatch, ledger,
-            realtime sockets, CI, release. Before that I spent <strong>12+ years</strong> in iOS and
-            <strong>seven of them leading</strong> the team behind a POS platform used by 20k+
-            restaurants — so I know what it costs to hand a codebase to other engineers, and I build
-            for that from day one.
+            <span class="drop">I</span> founded <strong>Buraq</strong> and built it myself. Since March 2026 I have
+            been Founder &amp; CTO of an Egyptian ride-hailing platform
+            (<span class="underline">buraqegypt.com</span>): a NestJS / PostgreSQL / Redis backend, a
+            29-screen operations console, rider and captain apps on iOS and Android, and the public
+            web app now live — <strong>3,100+ commits across nine repositories</strong>, every one of
+            them mine. Around the code I formed the company, priced the product from 626 observed
+            competitor fares, and wrote the business model and go-live plan. Before that I spent
+            <strong>12+ years</strong> in iOS and <strong>seven of them leading</strong> the team behind
+            a POS platform used by 20k+ restaurants — so I build for the day the second engineer
+            arrives.
         </p>
 
         <!-- ===================== STATS ===================== -->
@@ -950,12 +964,12 @@
                 <div class="lbl">Years<br>in engineering</div>
             </div>
             <div class="stat">
-                <div class="num">4<em></em></div>
-                <div class="lbl">Platform layers<br>owned solo</div>
+                <div class="num">9<em></em></div>
+                <div class="lbl">Repos built<br>by one author</div>
             </div>
             <div class="stat">
-                <div class="num">2,800<em>+</em></div>
-                <div class="lbl">Tests on the<br>backend I wrote</div>
+                <div class="num">10<em>k+</em></div>
+                <div class="lbl">Automated tests<br>across the platform</div>
             </div>
             <div class="stat">
                 <div class="num">20<em>k+</em></div>
@@ -974,18 +988,18 @@
             <div class="charter">
                 <div class="card">
                     <div class="n">01 — Ship from nothing</div>
-                    <h3>Empty repo to running system</h3>
-                    <p>I take the first version all the way myself — data model, API contract, auth, the deploy. On the current platform that meant a <b>trip state machine</b>, <b>scored dispatch</b> over a Redis geo index, a <b>double-entry ledger</b>, realtime sockets and <b>2,800+ tests</b>, before anyone else touched the code.</p>
+                    <h3>Empty repo to launch-ready platform</h3>
+                    <p>I take the first version all the way myself — data model, API contract, auth, the deploy. At Buraq that is a <b>22-module</b> backend (<b>trip state machine</b>, <b>scored dispatch</b> over a Redis geo index, <b>double-entry ledger</b>, five realtime gateways, <b>330+ endpoints</b>, <b>2,900+ tests</b>), then every client that sits on it — before anyone else touched the code.</p>
                 </div>
                 <div class="card">
-                    <div class="n">02 — Stack Decisions</div>
-                    <h3>Choose the bets, own the consequences</h3>
-                    <p>Nobody to escalate to when you are the whole engineering team. I pick the stack, set the module boundaries and the security posture, and live with the results — then keep the codebase current as it grows, the way I moved a seven-year-old production POS onto SwiftUI without pausing delivery.</p>
+                    <div class="n">02 — Found the Company</div>
+                    <h3>Decide what nobody else can decide</h3>
+                    <p>Nobody to escalate to when you are the founder and the whole engineering team. At Buraq I formed the company, mapped the Law 87/2018 ride-hailing licence, and set the fares from a <b>626-ride field study</b> of Cairo's incumbents (23 fitted rate cards) — a 20% commission, a long-trip taper and minimums under every competitor's — each decision run through the business model <b>before it shipped as a migration</b>.</p>
                 </div>
                 <div class="card">
                     <div class="n">03 — Standards Before Scale</div>
                     <h3>Build it so a team can take it over</h3>
-                    <p>Idempotent mutations, acyclic module boundaries, a CI suite that gates the merge, Swagger docs — written while I was still the only engineer. That is the difference between a prototype and something you can <b>hire into</b>.</p>
+                    <p>Idempotent mutations, acyclic module boundaries, migrations as the only way the schema changes, a CI suite that gates the merge, Swagger docs, and a shared core package versioned and pinned by every client — written while I was still the only engineer. That is the difference between a prototype and something you can <b>hire into</b>.</p>
                 </div>
                 <div class="card">
                     <div class="n">04 — Then Lead the Team</div>
@@ -1008,43 +1022,57 @@
                     <div class="when">
                         Mar 2026 — Present
                         <span class="now">Current</span>
-                        <span class="place">Independent</span>
+                        <span class="place">Cairo · Founder</span>
                     </div>
                     <div class="what">
-                        <div class="title">Founding Platform Architect — iOS · Android · Backend · Web</div>
-                        <div class="org">Ride-Hailing Platform · Independent Project</div>
-                        <p class="lead">Took the <b>full technical scope of a founding CTO</b> and carried it alone: chose the stack, set the standards, and have been building a production ride-hailing platform — a hardened backend and a real-time ops console <b>in production</b>, with two native <b>iOS/SwiftUI</b> apps (Rider &amp; Driver) and the Android driver app in active development. Every layer from data model to release, governed by explicit rules: idempotent mutations, double-entry accounting, acyclic module boundaries, and a CI test suite that gates the merge.</p>
+                        <div class="title">Founder &amp; CTO — Backend · Web · iOS · Android</div>
+                        <div class="org"><a href="https://buraqegypt.com" target="_blank" rel="noopener">Buraq — buraqegypt.com</a> · Buraq Technologies</div>
+                        <p class="lead">Founded an Egyptian ride-hailing platform and have carried its <b>entire technical scope alone</b>: chose the stack, set the standards, and built nine repositories from empty — a hardened backend and operations console, rider and captain apps on <b>iOS and Android</b>, a shared core package per platform, and the public web app <b>live at buraqegypt.com</b>. Every layer governed by explicit rules: idempotent mutations, double-entry accounting, acyclic module boundaries, and a CI suite that gates the merge. Now preparing a cash-only lean beta in Cairo.</p>
                         <div class="tracks">
                             <div class="track">
-                                <div><span class="plat">Backend APIs</span><span class="per">NestJS · TypeScript · Mar ’26 → now</span></div>
+                                <div><span class="plat">Backend API</span><span class="per">NestJS · TypeScript · Mar ’26 → now</span></div>
                                 <div>
                                     <div class="bar"><i style="left:0%;width:100%"></i></div>
-                                    <div class="desc">Modular monolith, <b>22 domains</b> — <b>trip state machine</b>, <b>scored dispatch</b> over a Redis geo index, <b>double-entry ledger</b>, realtime rider/driver/admin <b>sockets</b>, JWT + phone-OTP, idempotency &amp; audit log · ~300 endpoints over 47 controllers, <b>2,800+ tests</b>, Swagger docs.</div>
+                                    <div class="desc">Modular monolith, <b>22 modules</b> in an acyclic graph — <b>trip state machine</b>, <b>scored waterfall dispatch</b> over a Redis geo index, admin-tunable pricing across six ride tiers, <b>double-entry ledger</b> with cash and card settlement (Paymob, Fawry), scheduled and multi-stop rides, five realtime <b>Socket.IO gateways</b>, OTP / Apple / Google auth with RBAC, idempotency and audit log · <b>330+ endpoints</b> over 55 controllers, 62 entities, <b>2,900+ tests</b>, Swagger docs.</div>
                                 </div>
                             </div>
                             <div class="track">
-                                <div><span class="plat">Admin Console</span><span class="per">Next.js 14 · Jun ’26 → now</span></div>
+                                <div><span class="plat">Ops Console</span><span class="per">Next.js 14 · Jul ’26 → now</span></div>
                                 <div>
-                                    <div class="bar"><i style="left:43%;width:57%"></i></div>
-                                    <div class="desc">Bespoke <b>30-screen</b> ops surface — live <b>MapLibre</b> trips map, dispatch/SOS live boards, KYC onboarding review, finance reconciliation, refunds/payouts, cash control, map <b>zone editor</b>, feature flags, audit log, <b>Google SSO</b>.</div>
+                                    <div class="bar"><i style="left:50%;width:50%"></i></div>
+                                    <div class="desc"><b>29-screen</b> ops surface — live <b>MapLibre</b> trips map with demand heatmap, dispatch and SOS boards, KYC review, finance reconciliation, refunds and payouts, cash control, map <b>zone editor</b>, feature flags, audit log, <b>Google SSO</b> · English and Arabic, 170+ tests.</div>
                                 </div>
                             </div>
                             <div class="track">
-                                <div><span class="plat">iOS Apps · Rider &amp; Driver</span><span class="per">SwiftUI · Jul ’26 → now</span></div>
+                                <div><span class="plat">iOS · Rider &amp; Captain</span><span class="per">SwiftUI · Swift 6 · Jul ’26 → now</span></div>
                                 <div>
-                                    <div class="bar"><i style="left:57%;width:43%"></i></div>
-                                    <div class="desc">Two native <b>SwiftUI</b> apps on a shared <b>BuraqCore</b> Swift package (domain · networking · design system, pinned remotely) — live GPS <b>trip lifecycle</b>, Socket.IO feeds with fresh-token reconnect, in-app chat, payments, Live Activities, driver earnings &amp; turn-by-turn navigation · ~150 SwiftUI views, <b>430+ tests</b>.</div>
+                                    <div class="bar"><i style="left:50%;width:50%"></i></div>
+                                    <div class="desc">Two native <b>SwiftUI</b> apps on a shared <b>BuraqCore</b> package (domain · networking · design system, version-pinned) — the full <b>trip lifecycle</b> on live GPS, Socket.IO feeds with fresh-token reconnect, chat, wallet and payments, <b>Live Activities</b>, Siri voice booking, on-device ID verification, captain earnings and navigation · ~240 views, <b>1,000+ tests</b>, strict concurrency.</div>
                                 </div>
                             </div>
                             <div class="track">
-                                <div><span class="plat">Android App · Driver</span><span class="per">Kotlin · Jetpack Compose · Sep ’26 → now</span></div>
+                                <div><span class="plat">Android · Captain</span><span class="per">Kotlin · Jetpack Compose · Aug ’26 → now</span></div>
                                 <div>
-                                    <div class="bar"><i style="left:71%;width:29%"></i></div>
-                                    <div class="desc">Native <b>Kotlin / Compose</b> port of the driver app against <b>the same API contract</b> — modularised (core · networking · design system · domain) with the design-system and CI bar in place; product features porting now.</div>
+                                    <div class="bar"><i style="left:62.5%;width:37.5%"></i></div>
+                                    <div class="desc">Native port against <b>the same API contract</b> — 18 feature modules on convention plugins, Hilt, a pure-Kotlin domain; onboarding, the shift's foreground service and the trip end to end running against the backend · <b>1,500+ tests</b>.</div>
+                                </div>
+                            </div>
+                            <div class="track">
+                                <div><span class="plat">Android · Rider</span><span class="per">Kotlin · Jetpack Compose · Sep ’26 → now</span></div>
+                                <div>
+                                    <div class="bar"><i style="left:75%;width:25%"></i></div>
+                                    <div class="desc">Screen-by-screen parity port of the iOS rider app — 11 feature modules on a published <b>buraq-core-android</b> (GitHub Packages) · <b>2,200+ tests</b>, including 371 screenshot goldens in light, dark and RTL.</div>
+                                </div>
+                            </div>
+                            <div class="track">
+                                <div><span class="plat">Web · buraqegypt.com</span><span class="per">Next.js 16 · React 19 · Oct ’26 → now</span></div>
+                                <div>
+                                    <div class="bar"><i style="left:87.5%;width:12.5%"></i></div>
+                                    <div class="desc">Marketing site, <b>rider web app</b> with live trip tracking, <b>captain onboarding portal</b> with on-device document OCR, public trip-share pages and app links · English and Arabic (RTL), WCAG 2.2 AA, <b>1,800+ tests</b> · <b>live on Render since 15 Oct 2026</b>.</div>
                                 </div>
                             </div>
                         </div>
-                        <p class="close">One backend · one contract · three clients in flight — plus growth loops (promotions, referrals, loyalty tiers, wallet), driver safety/SOS, and scheduled reconciliation jobs. The exercise a technical leader needs periodically: own every trade-off yourself, then know exactly what you are asking of a team.</p>
+                        <p class="close">One backend · one contract · six client surfaces — and the company around them: incorporation, the Law 87/2018 licence path, a pricing engine fitted to 626 observed fares, the business model and investor materials, the go-live plan. 3,100+ commits, one author — so I know exactly what I will be asking of the team I hire.</p>
                     </div>
                 </article>
 
@@ -1169,10 +1197,10 @@
             <div class="projects">
                 <article class="proj">
                     <div class="idx">01 — FULL-STACK</div>
-                    <h3>Ride-Hailing Platform <span style="font-family:var(--mono);font-size:11px;color:var(--ink-3)">(built from scratch · since Mar 2026)</span></h3>
-                    <div class="tech">SwiftUI · Kotlin · Jetpack Compose · NestJS · TypeScript · PostgreSQL · Redis · Socket.IO · Next.js</div>
-                    <p>End-to-end ride-hailing platform architected solo: a hardened NestJS backend (trip state machine, scored dispatch, double-entry ledger, realtime sockets, 2,800+ tests) and a real-time Next.js operations console <strong>in production</strong>, with <strong>three native clients</strong> (Rider &amp; Driver on iOS/SwiftUI, Driver on Android/Kotlin·Compose) in active development.</p>
-                    <div class="meta"><span class="dot">◆</span> Four Platforms · Solo Ownership · Production Security</div>
+                    <h3><a href="https://buraqegypt.com" target="_blank" rel="noopener">Buraq — Ride-Hailing</a> <span style="font-family:var(--mono);font-size:11px;color:var(--ink-3)">(founded Mar 2026)</span></h3>
+                    <div class="tech">NestJS · TypeScript · PostgreSQL · Redis · Socket.IO · Next.js · SwiftUI · Kotlin · Jetpack Compose</div>
+                    <p>Egyptian ride-hailing platform I founded and built solo: a hardened NestJS backend (trip state machine, scored dispatch, double-entry ledger, five realtime gateways, 2,900+ tests), a 29-screen ops console, rider and captain apps on <strong>iOS and Android</strong>, and the public web app <strong>live at buraqegypt.com</strong>.</p>
+                    <div class="meta"><span class="dot">◆</span> Founder &amp; CTO · Nine Repos · 10k+ Tests</div>
                 </article>
 
                 <article class="proj">
@@ -1248,6 +1276,19 @@
                     </div>
 
                     <div class="skill-block">
+                        <h4>Founder <span>company</span></h4>
+                        <div class="tags">
+                            <span class="tag hot">Company Formation</span>
+                            <span class="tag hot">Pricing &amp; Unit Economics</span>
+                            <span class="tag">Business Modelling</span>
+                            <span class="tag">Investor Materials</span>
+                            <span class="tag">Ride-Hailing Licensing</span>
+                            <span class="tag">Payments Vendors</span>
+                            <span class="tag">Go-to-Market</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
                         <h4>iOS — 2025 <span>core</span></h4>
                         <div class="tags">
                             <span class="tag hot">Swift 6.0</span>
@@ -1318,8 +1359,22 @@
                             <span class="tag">GraphQL</span>
                             <span class="tag">Firebase</span>
                             <span class="tag">CloudKit</span>
-                            <span class="tag">WebSockets</span>
+                            <span class="tag">Socket.IO</span>
                             <span class="tag">Swagger/OpenAPI</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>Web <span>full-stack</span></h4>
+                        <div class="tags">
+                            <span class="tag hot">Next.js 16</span>
+                            <span class="tag">React 19</span>
+                            <span class="tag">Tailwind</span>
+                            <span class="tag">MapLibre</span>
+                            <span class="tag">Vitest</span>
+                            <span class="tag">Playwright</span>
+                            <span class="tag">i18n / RTL</span>
                         </div>
                     </div>
 
@@ -1331,6 +1386,7 @@
                             <span class="tag">TestFlight</span>
                             <span class="tag">Instruments</span>
                             <span class="tag">Git</span>
+                            <span class="tag">Claude Code</span>
                             <span class="tag">Copilot</span>
                             <span class="tag">Cursor</span>
                         </div>
@@ -1356,6 +1412,7 @@
                         <div class="folio-cat">
                             <div class="h">Transportation</div>
                             <div class="items">
+                                <a href="https://buraqegypt.com" target="_blank" rel="noopener">Buraq</a> — founder<br>
                                 <a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" target="_blank" rel="noopener">Ego — Rider</a><br>
                                 <a href="https://apps.apple.com/sa/app/ego-driver/id1379066908" target="_blank" rel="noopener">Ego — Driver</a><br>
                                 <a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" target="_blank" rel="noopener">Ego — Watch app</a>
@@ -1472,7 +1529,7 @@
                     <div class="ach">
                         <div class="item"><span class="n">01</span><span class="t">Led an iOS engineering team for <b>7 consecutive years</b> on a POS platform serving <b>20k+ restaurants</b> and cafés — through the product's growth from launch scale to enterprise.</span></div>
                         <div class="item"><span class="n">02</span><span class="t">Held a <b>99.8–99.9% crash-free rate</b> and cut deployment time <b>60%</b> by building the standards, tests and CI/CD the team ran on.</span></div>
-                        <div class="item"><span class="n">03</span><span class="t">Architecting a <b>full-stack ride-hailing platform solo</b> — NestJS/PostgreSQL backend and Next.js ops console in production, three native clients (two iOS, one Android) in development, with idempotent APIs and double-entry accounting.</span></div>
+                        <div class="item"><span class="n">03</span><span class="t"><b>Founded Buraq</b> (buraqegypt.com), an Egyptian ride-hailing platform, and built all nine repositories solo — backend, ops console, rider and captain apps on iOS and Android, and the public web app, live since Oct 2026 — behind <b>10,000+ automated tests</b>.</span></div>
                         <div class="item"><span class="n">04</span><span class="t">Built a food-delivery platform serving <b>20M+ users</b> across Saudi Arabia and Bahrain, and a ride-hailing ecosystem serving <b>15M+ users</b> in Saudi Arabia.</span></div>
                         <div class="item"><span class="n">05</span><span class="t"><b>10+ apps</b> published on the App Store, used by millions across MENA.</span></div>
                         <div class="item"><span class="n">06</span><span class="t"><b>30+ projects</b> delivered across a 12-year career.</span></div>
@@ -1484,7 +1541,7 @@
 
         <!-- ===================== COLOPHON ===================== -->
         <footer class="colophon reveal d4">
-            <span><b>Founding engineer</b> · builds v1 solo · <b>12+</b> years · <b>8+</b> leading</span>
+            <span><b>Founder &amp; CTO, Buraq</b> · builds v1 solo · <b>12+</b> years · <b>8+</b> leading</span>
             <span>Set in Fraunces &amp; JetBrains Mono</span>
             <span>Edition 2026 · Cairo ⟶ Riyadh</span>
         </footer>

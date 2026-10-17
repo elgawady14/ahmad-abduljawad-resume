@@ -5,6 +5,16 @@ Archived, self-contained snapshots of the resume. Each folder holds its own
 **design** editions (same iOS Tech Lead content, different look) and **role** editions
 (same Editorial design, content retargeted to a specific job title).
 
+## Founder & CTO, Buraq (every edition)
+
+Since 17 Oct 2026 every edition names the ride-hailing platform: **Buraq** (buraqegypt.com, Buraq
+Technologies), founded by Ahmad in March 2026 and built solo across nine repositories. Each edition
+carries the same Buraq facts in its experience entry, project card, honours and portfolio index
+(re-measured from the source repos on 17 Oct 2026: 22 backend modules, 330+ endpoints, 2,900+
+backend tests, 10,000+ tests platform-wide, 3,100+ commits; web app live since 15 Oct 2026), and
+adds "Founder & CTO, Buraq" to its masthead. Only the backend README's deployment status is
+reflected: the platform is described as launch-ready with the web app live, not "in production".
+
 ## Design editions
 
 | Version | Folder | Design | Palette / Type | Vibe |
@@ -47,13 +57,18 @@ frames the same seven years at Marn for a different reader.
 | **Engineering Lead** · Engineering Manager | [`2026-08-engineering-lead/`](./2026-08-engineering-lead/) | *How I Run a Team* — people, predictability, quality, technical credibility | `Ahmad_Engineering_Lead_Resume.pdf` |
 | **Technical Lead** · Staff Engineer · Architect | [`2026-08-technical-lead/`](./2026-08-technical-lead/) | *How I Lead Technically* — architecture, standards in code, mentoring, whole-stack depth | `Ahmad_Technical_Lead_Resume.pdf` |
 
-| **Founding Engineer** · Founding CTO | [`2026-08-founding-cto/`](./2026-08-founding-cto/) | *Zero to One* — ship from nothing, stack decisions, standards before scale, then lead the team | `Ahmad_Founding_CTO_Resume.pdf` |
+| **Founder & CTO, Buraq** · Founding Engineer | [`2026-08-founding-cto/`](./2026-08-founding-cto/) | *Zero to One* — ship from nothing, found the company, standards before scale, then lead the team | `Ahmad_Founding_CTO_Resume.pdf` |
 
-The **Founding Engineer** edition is the CTO edition re-cut for founder-shaped roles (early-stage
-startup, founding engineer, hands-on CTO): the ongoing solo platform leads the experience section
-instead of Marn, and the stat band and § 01 are rebuilt around building v1 alone. Use it only where
-the employer wants someone building right now — for an established engineering org, the plain
-**CTO** edition leads with the stronger credential.
+The **Founder & CTO** edition is the CTO edition re-cut for founder-shaped roles (early-stage
+startup, founding engineer, hands-on CTO). It leads with Buraq (buraqegypt.com), the Egyptian
+ride-hailing platform Ahmad founded in March 2026 and built solo across nine repositories: the
+NestJS backend, the ops console, rider and captain apps on iOS and Android, and the public web app
+(live since 15 Oct 2026). The stat band and § 01 are rebuilt around founding the company as well as
+the code (incorporation, the Law 87/2018 licence path, the 626-fare pricing study). Figures were
+re-measured from `~/Learn/Topics/Buraq` on 17 Oct 2026 (22 backend modules, 330+ endpoints, 2,900+
+backend tests, 10,000+ tests platform-wide, 3,100+ commits). Use it where the employer wants someone
+building right now — for an established engineering org, the plain **CTO** edition leads with the
+stronger credential.
 
 Each has a terminal-design twin at `2026-08-<title>-terminal/`, linked from its editorial
 "See the live interactive edition" button, and each exports a Riyadh + Cairo PDF.

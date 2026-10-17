@@ -75,11 +75,11 @@ for. Every edition exports a Riyadh (default) and a Cairo PDF; see [`versions/`]
 | **CTO · Head of Engineering** | [`versions/2026-08-cto/`](./versions/2026-08-cto/) | `Ahmad_CTO_Resume.pdf` |
 | **Engineering Lead · Engineering Manager** | [`versions/2026-08-engineering-lead/`](./versions/2026-08-engineering-lead/) | `Ahmad_Engineering_Lead_Resume.pdf` |
 | **Technical Lead · Staff Engineer · Architect** | [`versions/2026-08-technical-lead/`](./versions/2026-08-technical-lead/) | `Ahmad_Technical_Lead_Resume.pdf` |
-| **Founding Engineer · Founding CTO** (early-stage) | [`versions/2026-08-founding-cto/`](./versions/2026-08-founding-cto/) | `Ahmad_Founding_CTO_Resume.pdf` |
+| **Founder & CTO, Buraq · Founding Engineer** (early-stage) | [`versions/2026-08-founding-cto/`](./versions/2026-08-founding-cto/) | `Ahmad_Founding_CTO_Resume.pdf` |
 | **Senior Software Engineer** (hands-on, iOS · Android · Backend) | [`versions/2026-10-senior-software-engineer/`](./versions/2026-10-senior-software-engineer/) | `Ahmad_Senior_Software_Engineer_Resume.pdf` |
 | **Full-Stack Engineer** (backend · web · mobile) | [`versions/2026-10-fullstack-engineer/`](./versions/2026-10-fullstack-engineer/) | `Ahmad_Fullstack_Engineer_Resume.pdf` |
 
-Each also has a dark "terminal" twin at `<edition>-terminal/` for sending as a live link.
+Each also has a dark "terminal" twin at `<edition>-terminal/` for sending as a live link. Every edition names Ahmad as **Founder & CTO of [Buraq](https://buraqegypt.com)**, the Egyptian ride-hailing platform he built solo.
 
 ## 🎓 Education & Certifications
 
