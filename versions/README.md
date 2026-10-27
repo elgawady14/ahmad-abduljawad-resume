@@ -19,7 +19,7 @@ reflected: the platform is described as launch-ready with the web app live, not 
 
 | Version | Folder | Design | Palette / Type | Vibe |
 |--------|--------|--------|----------------|------|
-| 2026-06 · **Editorial** | [`2026-06-editorial/`](./2026-06-editorial/) | Editorial broadsheet | Warm paper + oxblood · Fraunces / Hanken / JetBrains Mono | Magazine-grade, refined. **Current live design.** |
+| 2026-06 · **Editorial** | [`2026-06-editorial/`](./2026-06-editorial/) | Editorial broadsheet | Warm paper + oxblood · Fraunces / Hanken / JetBrains Mono | Magazine-grade, refined. Design used by every role edition. |
 | 2026-06 · **Terminal** | [`2026-06-terminal/`](./2026-06-terminal/) | Dark engineering console | Near-black IDE + green/amber/cyan · JetBrains Mono | Unmistakably "engineer," striking on screen. |
 | 2026-06 · **Swiss** | [`2026-06-swiss/`](./2026-06-swiss/) | Swiss / brutalist grid | Stark white + electric blue · Anton / Archivo | Bold, art-directed studio portfolio. |
 
@@ -57,7 +57,7 @@ frames the same seven years at Marn for a different reader.
 | **Engineering Lead** · Engineering Manager | [`2026-08-engineering-lead/`](./2026-08-engineering-lead/) | *How I Run a Team* — people, predictability, quality, technical credibility | `Ahmad_Engineering_Lead_Resume.pdf` |
 | **Technical Lead** · Staff Engineer · Architect | [`2026-08-technical-lead/`](./2026-08-technical-lead/) | *How I Lead Technically* — architecture, standards in code, mentoring, whole-stack depth | `Ahmad_Technical_Lead_Resume.pdf` |
 
-| **Founder & CTO, Buraq** · Founding Engineer | [`2026-08-founding-cto/`](./2026-08-founding-cto/) | *Zero to One* — ship from nothing, found the company, standards before scale, then lead the team | `Ahmad_Founding_CTO_Resume.pdf` |
+| **Founder & CTO, Buraq** · Founding Engineer — **the live root page** | [`2026-08-founding-cto/`](./2026-08-founding-cto/) | *Zero to One* — ship from nothing, found the company, standards before scale, then lead the team | `Ahmad_Founding_CTO_Resume.pdf` |
 
 The **Founder & CTO** edition is the CTO edition re-cut for founder-shaped roles (early-stage
 startup, founding engineer, hands-on CTO). It leads with Buraq (buraqegypt.com), the Egyptian

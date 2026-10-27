@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmad Abdul-Jawad Mahmoud — iOS Tech Lead · Team Lead · Senior Engineer · 12+ Years</title>
-    <meta name="description" content="Senior iOS engineer &amp; tech/team lead with 12+ years — SwiftUI architecture, team leadership and mentoring, and deep hands-on craft, shipping apps to millions across the MENA region. Founder &amp; CTO of Buraq (buraqegypt.com), an Egyptian ride-hailing platform built solo across backend, web, iOS and Android.">
+    <title>Ahmad Abdul-Jawad Mahmoud — Founder &amp; CTO, Buraq · Founding Engineer · Zero to One</title>
+    <meta name="description" content="Founder &amp; CTO of Buraq (buraqegypt.com), an Egyptian ride-hailing platform built solo from an empty repo: NestJS/PostgreSQL backend, Next.js operations console, rider and captain apps on iOS and Android, and the public web app live at buraqegypt.com — 3,100+ commits across nine repositories. 12+ years in engineering, 8+ leading; previously led a 5+ engineer iOS team for seven years on a POS platform serving 20k+ businesses."
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -349,6 +349,44 @@
             color: var(--ink-3);
             line-height: 1.4;
         }
+
+        /* ============================================================
+           LEADERSHIP CHARTER — the scope of the job, stated plainly
+           ============================================================ */
+        .charter {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-top: 1px solid var(--line);
+            border-left: 1px solid var(--line);
+        }
+        .charter .card {
+            padding: 17px 20px 19px;
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        .charter .card .n {
+            font-family: var(--mono);
+            font-size: 9.5px;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+        .charter .card h3 {
+            font-family: var(--serif);
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-size: 19px;
+            letter-spacing: -0.01em;
+            margin: 5px 0 7px;
+            color: var(--ink);
+        }
+        .charter .card p {
+            font-size: 12.8px;
+            line-height: 1.6;
+            color: var(--ink-2);
+        }
+        .charter .card p b { color: var(--ink); font-weight: 600; }
 
         /* ============================================================
            SECTION HEADERS
@@ -798,6 +836,7 @@
             .masthead { grid-template-columns: 1fr; gap: 22px; }
             .portrait { width: 150px; order: -1; }
             .stats { grid-template-columns: repeat(2, 1fr); }
+            .charter { grid-template-columns: 1fr; }
             .stat:nth-child(2) { border-right: none; }
             .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--line); }
             .entry { grid-template-columns: 1fr; gap: 10px; }
@@ -839,7 +878,7 @@
 
             /* graceful pagination — never split an atomic block, keep
                a heading with its content, don't strand the masthead/stats */
-            .masthead, .stats, .entry, .proj, .info, .ach .item,
+            .masthead, .stats, .entry, .proj, .info, .ach .item, .charter .card,
             .folio-cat, .skill-block, .contacts, .live-link { break-inside: avoid; }
             .sec-head { break-after: avoid; }
 
@@ -858,8 +897,8 @@
 
         <!-- ===================== MASTHEAD ===================== -->
         <div class="dateline reveal d1">
-            <span class="edition">No. 13 · Vol. Leadership</span>
-            <span>Curriculum Vitæ — The Engineering Record</span>
+            <span class="edition">No. 18 · Vol. Zero to One</span>
+            <span>Curriculum Vitæ — The Founder’s Record</span>
             <span>Est. MMXIV</span>
         </div>
 
@@ -870,13 +909,13 @@
                     <span class="family">Mahmoud</span>
                 </h1>
                 <div class="role-bar">
-                    <div class="role">iOS Tech Lead <span class="sep">/</span> Team Lead <span class="sep">/</span> Founder &amp; CTO, Buraq</div>
-                    <div class="tenure">Cairo ⟶ Riyadh · 12+ Years in the Field</div>
+                    <div class="role">Founder &amp; CTO, Buraq <span class="sep">/</span> Founding Engineer <span class="sep">/</span> Technical Lead</div>
+                    <div class="tenure">Cairo ⟶ Riyadh · Builds the Company and Its First Version</div>
                 </div>
             </div>
             <figure class="portrait">
                 <img src="assets/portrait.jpg" alt="Portrait of Ahmad Abdul-Jawad Mahmoud">
-                <figcaption class="cap"><span>iOS Tech Lead</span><b>EST. 2014</b></figcaption>
+                <figcaption class="cap"><span>Founder &amp; CTO</span><b>EST. 2014</b></figcaption>
             </figure>
         </header>
 
@@ -896,7 +935,7 @@
         </nav>
 
         <div class="live-row reveal d2">
-            <a class="live-link" href="https://elgawady14.github.io/ahmad-ios-resume/versions/2026-07-ios-terminal/" target="_blank" rel="noopener">
+            <a class="live-link" href="https://elgawady14.github.io/ahmad-ios-resume/versions/2026-08-founding-cto-terminal/" target="_blank" rel="noopener">
                 <span class="pulse"></span> See the live interactive edition <span class="arr">↗</span>
             </a>
             <a class="live-link venture" href="https://buraqegypt.com" target="_blank" rel="noopener">
@@ -906,63 +945,79 @@
 
         <!-- ===================== LEAD ===================== -->
         <p class="lead reveal d2">
-            <span class="drop">S</span>enior iOS Tech Lead with <strong>12+ years</strong> architecting and
-            shipping <strong>SwiftUI</strong> apps used by <span class="underline">millions across the MENA region</span>.
-            I lead iOS teams and set technical direction — and since March 2026 I am also
-            <strong>Founder &amp; CTO of Buraq</strong> (<span class="underline">buraqegypt.com</span>), an Egyptian
-            ride-hailing platform I built solo: rider and captain apps on iOS and Android, a hardened
-            NestJS / PostgreSQL / Redis backend, a 29-screen ops console, and the public web app, live.
+            <span class="drop">I</span> founded <strong>Buraq</strong> and built it myself. Since March 2026 I have
+            been Founder &amp; CTO of an Egyptian ride-hailing platform
+            (<span class="underline">buraqegypt.com</span>): a NestJS / PostgreSQL / Redis backend, a
+            29-screen operations console, rider and captain apps on iOS and Android, and the public
+            web app now live — <strong>3,100+ commits across nine repositories</strong>, every one of
+            them mine. Around the code I formed the company, priced the product from 626 observed
+            competitor fares, and wrote the business model and go-live plan. Before that I spent
+            <strong>12+ years</strong> in iOS and <strong>seven of them leading</strong> the team behind
+            a POS platform used by 20k+ restaurants — so I build for the day the second engineer
+            arrives.
         </p>
 
         <!-- ===================== STATS ===================== -->
         <section class="stats reveal d3">
             <div class="stat">
                 <div class="num">12<em>+</em></div>
-                <div class="lbl">Years<br>in iOS</div>
+                <div class="lbl">Years<br>in engineering</div>
             </div>
             <div class="stat">
-                <div class="num">30<em>+</em></div>
-                <div class="lbl">Projects<br>delivered</div>
+                <div class="num">9<em></em></div>
+                <div class="lbl">Repos built<br>by one author</div>
             </div>
             <div class="stat">
-                <div class="num">35<em>M+</em></div>
-                <div class="lbl">Users reached<br>across apps</div>
+                <div class="num">10<em>k+</em></div>
+                <div class="lbl">Automated tests<br>across the platform</div>
             </div>
             <div class="stat">
                 <div class="num">20<em>k+</em></div>
-                <div class="lbl">Restaurants<br>on Marn POS</div>
+                <div class="lbl">Businesses served<br>by the POS I led</div>
+            </div>
+        </section>
+
+        <!-- ===================== LEADERSHIP CHARTER ===================== -->
+        <section class="section reveal d3">
+            <div class="sec-head">
+                <span class="num">§ 01</span>
+                <h2>Zero to One</h2>
+                <span class="rule"></span>
+            </div>
+
+            <div class="charter">
+                <div class="card">
+                    <div class="n">01 — Ship from nothing</div>
+                    <h3>Empty repo to launch-ready platform</h3>
+                    <p>I take the first version all the way myself — data model, API contract, auth, the deploy. At Buraq that is a <b>22-module</b> backend (<b>trip state machine</b>, <b>scored dispatch</b> over a Redis geo index, <b>double-entry ledger</b>, five realtime gateways, <b>330+ endpoints</b>, <b>2,900+ tests</b>), then every client that sits on it — before anyone else touched the code.</p>
+                </div>
+                <div class="card">
+                    <div class="n">02 — Found the Company</div>
+                    <h3>Decide what nobody else can decide</h3>
+                    <p>Nobody to escalate to when you are the founder and the whole engineering team. At Buraq I formed the company, mapped the Law 87/2018 ride-hailing licence, and set the fares from a <b>626-ride field study</b> of Cairo's incumbents (23 fitted rate cards) — a 20% commission, a long-trip taper and minimums under every competitor's — each decision run through the business model <b>before it shipped as a migration</b>.</p>
+                </div>
+                <div class="card">
+                    <div class="n">03 — Standards Before Scale</div>
+                    <h3>Build it so a team can take it over</h3>
+                    <p>Idempotent mutations, acyclic module boundaries, migrations as the only way the schema changes, a CI suite that gates the merge, Swagger docs, and a shared core package versioned and pinned by every client — written while I was still the only engineer. That is the difference between a prototype and something you can <b>hire into</b>.</p>
+                </div>
+                <div class="card">
+                    <div class="n">04 — Then Lead the Team</div>
+                    <h3>I have done the other half too</h3>
+                    <p>Seven years leading a <b>5+ engineer iOS team</b> — onboarding, mentoring, review culture, CI/CD, a <b>99.8–99.9% crash-free</b> rate in production. I know what founding code has to look like by the time the second engineer arrives, because I have been on the receiving end of it.</p>
+                </div>
             </div>
         </section>
 
         <!-- ===================== EXPERIENCE ===================== -->
         <section class="section reveal d3">
             <div class="sec-head">
-                <span class="num">§ 01</span>
+                <span class="num">§ 02</span>
                 <h2>Professional Experience</h2>
                 <span class="rule"></span>
             </div>
 
             <div class="xp">
-
-                <article class="entry">
-                    <div class="when">
-                        Aug 2019 — Aug 2026
-                        <span class="place">Riyadh, KSA</span>
-                    </div>
-                    <div class="what">
-                        <div class="title">iOS Team Lead</div>
-                        <div class="org"><a href="https://apps.apple.com/sa/app/marn/id1495693049" target="_blank" rel="noopener">Marn — Jahez Group</a></div>
-                        <ul>
-                            <li>Lead and mentor an iOS team of 5+ developers building enterprise POS solutions.</li>
-                            <li>Architect offline-first systems with CoreData and seamless cloud sync, serving 20k+ restaurants and cafés.</li>
-                            <li>Design sophisticated table management, order processing, and inventory tracking systems.</li>
-                            <li>Spearhead the migration to SwiftUI and modern practices (Combine, async/await).</li>
-                            <li>Optimised performance for 40% faster load times and a 99.8–99.9% crash-free rate.</li>
-                            <li>Established CI/CD pipelines and automated testing, cutting deployment time by 60%.</li>
-                        </ul>
-                    </div>
-                </article>
-
                 <article class="entry">
                     <div class="when">
                         Mar 2026 — Present
@@ -970,7 +1025,7 @@
                         <span class="place">Cairo · Founder</span>
                     </div>
                     <div class="what">
-                        <div class="title">Founder &amp; CTO — iOS · Android · Backend · Web</div>
+                        <div class="title">Founder &amp; CTO — Backend · Web · iOS · Android</div>
                         <div class="org"><a href="https://buraqegypt.com" target="_blank" rel="noopener">Buraq — buraqegypt.com</a> · Buraq Technologies</div>
                         <p class="lead">Founded an Egyptian ride-hailing platform and have carried its <b>entire technical scope alone</b>: chose the stack, set the standards, and built nine repositories from empty — a hardened backend and operations console, rider and captain apps on <b>iOS and Android</b>, a shared core package per platform, and the public web app <b>live at buraqegypt.com</b>. Every layer governed by explicit rules: idempotent mutations, double-entry accounting, acyclic module boundaries, and a CI suite that gates the merge. Now preparing a cash-only lean beta in Cairo.</p>
                         <div class="tracks">
@@ -1021,6 +1076,27 @@
                     </div>
                 </article>
 
+
+                <article class="entry">
+                    <div class="when">
+                        Aug 2019 — Aug 2026
+                        <span class="place">Riyadh, KSA</span>
+                    </div>
+                    <div class="what">
+                        <div class="title">iOS Team Lead <span style="font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:.04em">— 7 years leading the iOS org</span></div>
+                        <div class="org"><a href="https://apps.apple.com/sa/app/marn/id1495693049" target="_blank" rel="noopener">Marn — Jahez Group</a></div>
+                        <ul>
+                            <li><b>Led a 5+ engineer iOS team</b> for seven years — onboarding, mentoring, career growth, and the review culture behind an enterprise POS used by 20k+ restaurants and cafés.</li>
+                            <li><b>Owned the technical roadmap and architecture:</b> an offline-first CoreData core with cloud sync, built so a venue keeps trading when the network does not.</li>
+                            <li><b>Set the engineering standards</b> — module boundaries, code review, automated testing — that held the app at a 99.8–99.9% crash-free rate in production.</li>
+                            <li><b>Drove the multi-year migration</b> to SwiftUI, Combine and async/await without pausing feature delivery, and made the case for it to product leadership.</li>
+                            <li><b>Built CI/CD and the release process from scratch</b>, cutting deployment time 60% and shortening every engineer's feedback loop.</li>
+                            <li>Ran the performance programme (40% faster load times) and designed the table-management, order-processing and inventory systems at the heart of the product.</li>
+                            <li>Partnered with product, design and backend leadership on scope, estimates and delivery commitments the team could keep.</li>
+                        </ul>
+                    </div>
+                </article>
+
                 <article class="entry">
                     <div class="when">
                         Dec 2025 — Jun 2026
@@ -1045,7 +1121,7 @@
                         <div class="title">iOS Team Lead</div>
                         <div class="org"><a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" target="_blank" rel="noopener">Ego — The Ride Hailing App</a></div>
                         <ul>
-                            <li>Developed a comprehensive ride-hailing ecosystem (iOS, watchOS) serving 15M+ users in Saudi Arabia.</li>
+                            <li>Led iOS delivery for a complete ride-hailing ecosystem (rider, driver, watchOS) serving 15M+ users in Saudi Arabia.</li>
                             <li>Implemented real-time GPS tracking and navigation with MapKit and optimised route algorithms.</li>
                             <li>Integrated Apple Pay, HyperPay, and push-notification infrastructure.</li>
                             <li>Created seamless iPhone ⟷ Apple Watch handoff for continuous ride tracking.</li>
@@ -1113,22 +1189,14 @@
         <!-- ===================== PROJECTS ===================== -->
         <section class="section reveal d3">
             <div class="sec-head">
-                <span class="num">§ 02</span>
+                <span class="num">§ 03</span>
                 <h2>Selected Projects</h2>
                 <span class="rule"></span>
             </div>
 
             <div class="projects">
                 <article class="proj">
-                    <div class="idx">01 — AI / PRIVACY</div>
-                    <h3><a href="https://apps.apple.com/us/app/haramblur/id6741595731" target="_blank" rel="noopener">HaramBlur — Privacy Browser</a></h3>
-                    <div class="tech">SwiftUI · CoreML · WKWebView · CoreImage · Vision</div>
-                    <p>Privacy-focused iOS browser with real-time, AI-powered content detection and filtering. On-device ML, smart blur effects, and live video monitoring.</p>
-                    <div class="meta"><span class="dot">◆</span> AI-Powered Privacy Browser</div>
-                </article>
-
-                <article class="proj">
-                    <div class="idx">02 — FULL-STACK</div>
+                    <div class="idx">01 — FULL-STACK</div>
                     <h3><a href="https://buraqegypt.com" target="_blank" rel="noopener">Buraq — Ride-Hailing</a> <span style="font-family:var(--mono);font-size:11px;color:var(--ink-3)">(founded Mar 2026)</span></h3>
                     <div class="tech">NestJS · TypeScript · PostgreSQL · Redis · Socket.IO · Next.js · SwiftUI · Kotlin · Jetpack Compose</div>
                     <p>Egyptian ride-hailing platform I founded and built solo: a hardened NestJS backend (trip state machine, scored dispatch, double-entry ledger, five realtime gateways, 2,900+ tests), a 29-screen ops console, rider and captain apps on <strong>iOS and Android</strong>, and the public web app <strong>live at buraqegypt.com</strong>.</p>
@@ -1136,15 +1204,15 @@
                 </article>
 
                 <article class="proj">
-                    <div class="idx">03 — DELIVERY</div>
-                    <h3><a href="https://apps.apple.com/sa/app/hungerstation/id596011949" target="_blank" rel="noopener">HungerStation</a></h3>
-                    <div class="tech">UIKit · Firebase · Real-time APIs · Perf Optimization</div>
-                    <p>Major food-delivery platform serving 20M+ users across Saudi Arabia and Bahrain. Focused on performance and real-time order tracking.</p>
-                    <div class="meta"><span class="dot">★</span> 4.5 / 5 — 1.9M+ ratings</div>
+                    <div class="idx">02 — ENTERPRISE</div>
+                    <h3><a href="https://apps.apple.com/sa/app/marn/id1495693049" target="_blank" rel="noopener">Marn — iPad POS</a></h3>
+                    <div class="tech">SwiftUI · CoreData · CloudKit · Real-time Sync</div>
+                    <p>Enterprise point-of-sale serving 20k+ restaurants and cafés across Saudi Arabia. Offline-first architecture, complex table management, real-time order processing — <strong>the product my iOS team owned for seven years</strong>.</p>
+                    <div class="meta"><span class="dot">★</span> 4.8 / 5 — 2,437 ratings</div>
                 </article>
 
                 <article class="proj">
-                    <div class="idx">04 — MOBILITY</div>
+                    <div class="idx">03 — MOBILITY</div>
                     <h3><a href="https://apps.apple.com/sa/app/ego-the-ride-hailing-app/id1378953127" target="_blank" rel="noopener">Ego — Ride Hailing</a></h3>
                     <div class="tech">MapKit · Core Location · Apple Pay · Push · watchOS</div>
                     <p>Complete ride-hailing ecosystem: rider app, driver app, and Apple Watch companion. Real-time GPS, Apple Pay, and cross-device experiences for 15M+ users.</p>
@@ -1152,11 +1220,19 @@
                 </article>
 
                 <article class="proj">
-                    <div class="idx">05 — ENTERPRISE</div>
-                    <h3><a href="https://apps.apple.com/sa/app/marn/id1495693049" target="_blank" rel="noopener">Marn — iPad POS</a></h3>
-                    <div class="tech">SwiftUI · CoreData · CloudKit · Real-time Sync</div>
-                    <p>Enterprise point-of-sale serving 20k+ restaurants and cafés across Saudi Arabia. Offline-first architecture, complex table management, real-time order processing.</p>
-                    <div class="meta"><span class="dot">★</span> 4.8 / 5 — 2,437 ratings</div>
+                    <div class="idx">04 — DELIVERY</div>
+                    <h3><a href="https://apps.apple.com/sa/app/hungerstation/id596011949" target="_blank" rel="noopener">HungerStation</a></h3>
+                    <div class="tech">UIKit · Firebase · Real-time APIs · Perf Optimization</div>
+                    <p>Major food-delivery platform serving 20M+ users across Saudi Arabia and Bahrain. Focused on performance and real-time order tracking.</p>
+                    <div class="meta"><span class="dot">★</span> 4.5 / 5 — 1.9M+ ratings</div>
+                </article>
+
+                <article class="proj">
+                    <div class="idx">05 — AI / PRIVACY</div>
+                    <h3><a href="https://apps.apple.com/us/app/haramblur/id6741595731" target="_blank" rel="noopener">HaramBlur — Privacy Browser</a></h3>
+                    <div class="tech">SwiftUI · CoreML · WKWebView · CoreImage · Vision</div>
+                    <p>Privacy-focused iOS browser with real-time, AI-powered content detection and filtering. On-device ML, smart blur effects, and live video monitoring.</p>
+                    <div class="meta"><span class="dot">◆</span> AI-Powered Privacy Browser</div>
                 </article>
 
                 <article class="proj">
@@ -1176,9 +1252,40 @@
             <div>
                 <section class="section reveal d3" style="margin-top:0">
                     <div class="sec-head">
-                        <span class="num">§ 03</span>
+                        <span class="num">§ 04</span>
                         <h2>Stack &amp; Craft</h2>
                         <span class="rule"></span>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>Engineering Leadership <span>org</span></h4>
+                        <div class="tags">
+                            <span class="tag hot">Team Leadership</span>
+                            <span class="tag hot">Technical Direction</span>
+                            <span class="tag">Architecture Governance</span>
+                            <span class="tag">Technical Roadmap</span>
+                            <span class="tag">Mentoring &amp; Career Growth</span>
+                            <span class="tag">Onboarding</span>
+                            <span class="tag">Code Review Culture</span>
+                            <span class="tag">Estimation &amp; Planning</span>
+                            <span class="tag">Cross-functional Partnership</span>
+                            <span class="tag">Quality &amp; Crash Budgets</span>
+                            <span class="tag">Release Management</span>
+                            <span class="tag">Agile / Scrum</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>Founder <span>company</span></h4>
+                        <div class="tags">
+                            <span class="tag hot">Company Formation</span>
+                            <span class="tag hot">Pricing &amp; Unit Economics</span>
+                            <span class="tag">Business Modelling</span>
+                            <span class="tag">Investor Materials</span>
+                            <span class="tag">Ride-Hailing Licensing</span>
+                            <span class="tag">Payments Vendors</span>
+                            <span class="tag">Go-to-Market</span>
+                        </div>
                     </div>
 
                     <div class="skill-block">
@@ -1213,19 +1320,6 @@
                             <span class="tag">Clean Architecture</span>
                             <span class="tag">Coordinator</span>
                             <span class="tag">TDD</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-block">
-                        <h4>Leadership <span>org</span></h4>
-                        <div class="tags">
-                            <span class="tag hot">iOS Team Leadership</span>
-                            <span class="tag">Technical Direction</span>
-                            <span class="tag">Technical Roadmap</span>
-                            <span class="tag">Mentoring</span>
-                            <span class="tag">Code Review</span>
-                            <span class="tag">Delivery &amp; CI/CD</span>
-                            <span class="tag">Agile / Scrum</span>
                         </div>
                     </div>
 
@@ -1267,6 +1361,20 @@
                             <span class="tag">CloudKit</span>
                             <span class="tag">Socket.IO</span>
                             <span class="tag">Swagger/OpenAPI</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h4>Web <span>full-stack</span></h4>
+                        <div class="tags">
+                            <span class="tag hot">Next.js 16</span>
+                            <span class="tag">React 19</span>
+                            <span class="tag">Tailwind</span>
+                            <span class="tag">MapLibre</span>
+                            <span class="tag">Vitest</span>
+                            <span class="tag">Playwright</span>
+                            <span class="tag">i18n / RTL</span>
                         </div>
                     </div>
 
@@ -1278,7 +1386,8 @@
                             <span class="tag">TestFlight</span>
                             <span class="tag">Instruments</span>
                             <span class="tag">Git</span>
-                            <span class="tag">Claude Code</span><span class="tag">Copilot</span>
+                            <span class="tag">Claude Code</span>
+                            <span class="tag">Copilot</span>
                             <span class="tag">Cursor</span>
                         </div>
                     </div>
@@ -1287,7 +1396,7 @@
 
                 <section class="section reveal d3">
                     <div class="sec-head">
-                        <span class="num">§ 04</span>
+                        <span class="num">§ 05</span>
                         <h2>Portfolio Index</h2>
                         <span class="rule"></span>
                     </div>
@@ -1379,7 +1488,7 @@
             <aside>
                 <section class="section reveal d4" style="margin-top:0">
                     <div class="sec-head">
-                        <span class="num">§ 05</span>
+                        <span class="num">§ 06</span>
                         <h2>Record</h2>
                         <span class="rule"></span>
                     </div>
@@ -1413,18 +1522,18 @@
 
                 <section class="section reveal d4">
                     <div class="sec-head">
-                        <span class="num">§ 06</span>
+                        <span class="num">§ 07</span>
                         <h2>Honours</h2>
                         <span class="rule"></span>
                     </div>
                     <div class="ach">
-                        <div class="item"><span class="n">01</span><span class="t">Built a food-delivery platform serving <b>20M+ users</b> across Saudi Arabia and Bahrain.</span></div>
-                        <div class="item"><span class="n">02</span><span class="t">Built a ride-hailing ecosystem serving <b>15M+ users</b> in Saudi Arabia.</span></div>
+                        <div class="item"><span class="n">01</span><span class="t">Led an iOS engineering team for <b>7 consecutive years</b> on a POS platform serving <b>20k+ restaurants</b> and cafés — through the product's growth from launch scale to enterprise.</span></div>
+                        <div class="item"><span class="n">02</span><span class="t">Held a <b>99.8–99.9% crash-free rate</b> and cut deployment time <b>60%</b> by building the standards, tests and CI/CD the team ran on.</span></div>
                         <div class="item"><span class="n">03</span><span class="t"><b>Founded Buraq</b> (buraqegypt.com), an Egyptian ride-hailing platform, and built all nine repositories solo — backend, ops console, rider and captain apps on iOS and Android, and the public web app, live since Oct 2026 — behind <b>10,000+ automated tests</b>.</span></div>
-                        <div class="item"><span class="n">04</span><span class="t">Led a POS system serving <b>20k+ restaurants</b> and cafés.</span></div>
+                        <div class="item"><span class="n">04</span><span class="t">Built a food-delivery platform serving <b>20M+ users</b> across Saudi Arabia and Bahrain, and a ride-hailing ecosystem serving <b>15M+ users</b> in Saudi Arabia.</span></div>
                         <div class="item"><span class="n">05</span><span class="t"><b>10+ apps</b> published on the App Store, used by millions across MENA.</span></div>
-                        <div class="item"><span class="n">06</span><span class="t"><b>30+ iOS projects</b> delivered across a 12-year career.</span></div>
-                        <div class="item"><span class="n">07</span><span class="t">Early Swift adopter (WWDC 2014) and early SwiftUI adopter (WWDC 2019).</span></div>
+                        <div class="item"><span class="n">06</span><span class="t"><b>30+ projects</b> delivered across a 12-year career.</span></div>
+                        <div class="item"><span class="n">07</span><span class="t">Early Swift adopter (WWDC 2014) and early SwiftUI adopter (WWDC 2019) — a habit of betting on the right platform shift early.</span></div>
                     </div>
                 </section>
             </aside>
@@ -1432,9 +1541,9 @@
 
         <!-- ===================== COLOPHON ===================== -->
         <footer class="colophon reveal d4">
-            <span><b>iOS architecture</b> · <b>Founder &amp; CTO, Buraq</b> · <b>12+</b> years</span>
+            <span><b>Founder &amp; CTO, Buraq</b> · builds v1 solo · <b>12+</b> years · <b>8+</b> leading</span>
             <span>Set in Fraunces &amp; JetBrains Mono</span>
-            <span>Edition 2025 · Cairo</span>
+            <span>Edition 2026 · Cairo ⟶ Riyadh</span>
         </footer>
 
     </main>

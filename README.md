@@ -1,4 +1,4 @@
-# Ahmad Abdul-Jawad Mahmoud - iOS Tech Lead & Architect
+# Ahmad Abdul-Jawad Mahmoud - Founder & CTO, Buraq · iOS Tech Lead
 
 [![iOS](https://img.shields.io/badge/iOS-18+-blue.svg)](https://developer.apple.com/ios/)
 [![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)](https://swift.org/)
@@ -60,8 +60,9 @@ Senior iOS Tech Lead with **11+ years** of experience leading mobile development
 
 ## 📄 Resume
 
-- **[📱 View Interactive Resume](https://elgawady14.github.io/ahmad-ios-resume/)** (GitHub Pages)
-- **[📋 Download PDF Resume](./Ahmad_iOS_Resume.pdf)**
+- **[📱 View Interactive Resume](https://elgawady14.github.io/ahmad-ios-resume/)** (GitHub Pages) — the live page is the **Founder & CTO, Buraq** edition (copy of [`versions/2026-08-founding-cto/`](./versions/2026-08-founding-cto/))
+- **[📋 Download PDF Resume](./Ahmad_Founding_CTO_Resume.pdf)** · [Cairo PDF](./Ahmad_Founding_CTO_Cairo_Resume.pdf)
+- iOS edition: [`versions/2026-07-ios/`](./versions/2026-07-ios/) · [PDF](./versions/2026-07-ios/Ahmad_iOS_Resume.pdf)
 
 ### Targeted editions
 
