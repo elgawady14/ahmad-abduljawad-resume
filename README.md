@@ -60,7 +60,7 @@ Senior iOS Tech Lead with **11+ years** of experience leading mobile development
 
 ## 📄 Resume
 
-- **[📱 View Interactive Resume](https://elgawady14.github.io/ahmad-ios-resume/)** (GitHub Pages) — the live page is the **Founder & CTO, Buraq** edition (copy of [`versions/2026-08-founding-cto/`](./versions/2026-08-founding-cto/))
+- **[📱 View Interactive Resume](https://elgawady14.github.io/ahmad-abduljawad-resume/)** (GitHub Pages) — the live page is the **Founder & CTO, Buraq** edition (copy of [`versions/2026-08-founding-cto/`](./versions/2026-08-founding-cto/))
 - **[📋 Download PDF Resume](./Ahmad_Founding_CTO_Resume.pdf)** · [Cairo PDF](./Ahmad_Founding_CTO_Cairo_Resume.pdf)
 - iOS edition: [`versions/2026-07-ios/`](./versions/2026-07-ios/) · [PDF](./versions/2026-07-ios/Ahmad_iOS_Resume.pdf)
 
@@ -118,7 +118,7 @@ Each also has a dark "terminal" twin at `<edition>-terminal/` for sending as a l
 ## 🚀 GitHub Pages Deployment
 
 This resume is automatically deployed via GitHub Pages at:
-**https://elgawady14.github.io/ahmad-ios-resume/**
+**https://elgawady14.github.io/ahmad-abduljawad-resume/**
 
 ---
 
