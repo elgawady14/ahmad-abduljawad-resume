@@ -5,9 +5,17 @@
  * Produces ONE continuous-scroll page per edition (no page breaks), sized to
  * the full content height, matching the live web design 1:1.
  *
+ * Two outputs per edition:
+ *   - the screen PDF (default): ONE continuous-scroll page, 1:1 with the web.
+ *   - the A4 print PDF (--a4): real A4 pages at full type size, tuned for
+ *     colour printing (clean white paper, deeper ink, no stranded headings).
+ *     Written next to the screen PDF as …_A4_Print.pdf.
+ *
  * Usage:
- *   node scripts/generate-pdf.js              # regenerate every edition
+ *   node scripts/generate-pdf.js              # screen PDFs, every edition
  *   node scripts/generate-pdf.js root swiss   # only the named editions
+ *   node scripts/generate-pdf.js --a4         # A4 print PDFs, every edition
+ *   node scripts/generate-pdf.js --a4 ios     # A4 print PDF, one edition
  *
  * See PDF_CONVERSION.md for the full guide (setup, why each setting exists,
  * how to add a new edition, troubleshooting).
@@ -156,8 +164,155 @@ async function exportEdition(browser, job) {
   await page.close();
 }
 
+/* ------------------------------------------------------------------------
+ * A4 print mode (--a4)
+ *
+ * The screen PDF is one very tall page, so a printer shrinks it onto a single
+ * sheet. The A4 print PDF paginates the same content onto real A4 pages at
+ * full size and re-tunes the colours for paper:
+ *   - white paper, no grain/scanline texture (texture prints muddy, and most
+ *     printers can't print to the edge, which would frame a tinted page);
+ *   - darker secondary text and hairlines so they survive the printer;
+ *   - long entries may continue onto the next page, but single bullets,
+ *     cards and headings are never split or stranded;
+ *   - the page padding repeats on every page (box-decoration-break: clone).
+ *
+ * Each design family gets its own override sheet:
+ *   editorial — rendered with its own @media print rules (they keep the full
+ *               15px type scale), plus the overrides below;
+ *   swiss / terminal — their @media print rules shrink type to 9px to force a
+ *               single page, so they render from the screen layout instead,
+ *               laid out at A4_LAYOUT_W px and scaled onto the page. The dark
+ *               terminal theme is swapped for a light editor theme: a dark
+ *               page floods ink and prints heavy.
+ * ---------------------------------------------------------------------- */
+const A4_PAD_MM = 13;          // inner page padding, top/bottom, every page
+const A4_LAYOUT_W = 940;       // CSS px the screen-layout designs are laid out at
+
+const A4_COMMON = `
+  .toolbar, .fab { display: none !important; }
+  .rv, .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+`;
+
+const A4_CSS = {
+  editorial: `
+  @page { size: A4; margin: 0; }
+  html, body, .sheet { background: #fff !important; }
+  .sheet { padding: ${A4_PAD_MM}mm 14mm !important;
+           box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .sheet::after { display: none !important; }
+  :root { --ink: #111; --ink-2: #2e2b26; --ink-3: #5a554b;
+          --accent: #a3231c; --accent-d: #7a1914; --ochre: #9a6418;
+          --line: rgba(17,17,17,.22); --line-2: rgba(17,17,17,.38);
+          --paper: #fff; --paper-2: #f6f1e6; }
+  .proj, .proj:hover { background: #fff !important; }
+  .portrait img, .portrait:hover img { filter: none !important; }
+  .section, .entry, .xp { break-inside: auto !important; }
+  .entry ul li, .entry p, .proj, .entry .title, .entry .org { break-inside: avoid; }
+  .entry .what > .title, .entry .what > .org { break-after: avoid; }
+  .entry { orphans: 3; widows: 3; }
+  .entry ul li:last-child { break-before: avoid; }
+  .stats + .section { break-before: page; }   /* page 1 = masthead cover */
+  .colophon { break-before: avoid; break-inside: avoid; margin-top: 22px !important; padding-top: 12px !important; }
+`,
+  swiss: `
+  @page { size: A4; margin: 0; }
+  html, body { background: #fff !important; padding: 0 !important; }
+  .sheet { max-width: none !important; border: none !important; box-shadow: none !important;
+           background: #fff !important; padding: ${A4_PAD_MM}mm 14mm !important;
+           box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  :root { --paper: #fff; --ink-2: #2f2f29; --ink-3: #5a5a52; --hair: #b9b9b0; }
+  .photo img { mix-blend-mode: normal !important; filter: none !important; }
+  .photo::after { opacity: 0 !important; }
+  .section, .lower { break-inside: auto !important; }
+  .job, .proj, .fcat, .skill, .hon .it, .rec .blk { break-inside: avoid; }
+  .s-h { break-after: avoid; }
+  .foot { break-before: avoid; break-inside: avoid; }
+`,
+  terminal: `
+  @page { size: A4; margin: 0; }
+  :root { --bg: #fff; --bg-2: #f6f8fa; --bg-3: #eef2f6; --bg-hi: #eaeef2;
+          --line: #d8dee4; --line-2: #c2cad3;
+          --fg: #1f2328; --fg-dim: #4b5560; --fg-faint: #66707b;
+          --green: #1a7f37; --amber: #9a6700; --cyan: #0969da; --magenta: #8250df;
+          --red: #cf222e; --blue: #0550ae; }
+  html, body { background: #fff !important; padding: 0 !important; }
+  .win { max-width: none !important; border: none !important; border-radius: 0 !important;
+         box-shadow: none !important; overflow: visible !important;
+         padding: ${A4_PAD_MM}mm 0 !important;
+         box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .win::before { display: none !important; }
+  .titlebar { background: #f6f8fa !important; border: 1px solid var(--line); border-radius: 8px 8px 0 0; margin: 0 14mm; }
+  .tabs { background: #f6f8fa !important; margin: 0 14mm; border: 1px solid var(--line); border-top: none; }
+  .tab.on { background: #fff !important; }
+  .pane { padding-left: 14mm !important; padding-right: 14mm !important; }
+  h1, .stat .v, .job-top .role, .card h3, .blk .deg { color: #0d1117 !important; }
+  .job-top .now { color: #fff !important; }
+  .portrait img { filter: none !important; mix-blend-mode: normal !important; }
+  .statusbar { background: #f6f8fa !important; color: var(--fg-dim) !important;
+               margin: 0 14mm; border: 1px solid var(--line); border-radius: 0 0 8px 8px; }
+  .statusbar .seg.accent { color: #fff !important; }
+  .sec, .cols { break-inside: auto !important; }
+  .job li, .card, .fcat, .skill, .blk, .hon .h-item { break-inside: avoid; }
+  .job-top { break-after: avoid; }
+  .sec-h { break-after: avoid; }
+  .statusbar { break-before: avoid; break-inside: avoid; }
+  .pane { padding-bottom: 14px !important; }
+`,
+};
+
+/** Which override sheet an edition takes. */
+function designOf(job) {
+  if (job.id === 'swiss') return 'swiss';
+  return job.media === 'screen' ? 'terminal' : 'editorial';
+}
+
+async function exportA4(browser, job) {
+  const design = designOf(job);
+  const editorial = design === 'editorial';
+  const layoutW = editorial ? Math.round(PAGE_W_MM * MM) : A4_LAYOUT_W;
+  const out = job.pdf.replace(/\.pdf$/, '_A4_Print.pdf');
+
+  const page = await browser.newPage();
+  await page.emulateMediaType(editorial ? 'print' : 'screen');
+  // deviceScaleFactor 2: anything Chrome rasterises (blend modes, filters)
+  // comes out at print density instead of 96 dpi.
+  await page.setViewport({ width: layoutW, height: 1123, deviceScaleFactor: 2 });
+  await page.goto('file://' + path.join(ROOT, job.html) + (job.locParam ? '?loc=' + job.locParam : ''), { waitUntil: 'networkidle0' });
+  await page.addStyleTag({ content: A4_COMMON + A4_CSS[design] });
+  await new Promise((r) => setTimeout(r, 500)); // fonts / layout settle
+
+  const pdfOpts = {
+    printBackground: true,
+    ...(editorial
+      ? { preferCSSPageSize: true }
+      : { format: 'A4', margin: { top: 0, right: 0, bottom: 0, left: 0 },
+          scale: Math.round(PAGE_W_MM * MM) / layoutW }),
+  };
+  const countPages = (buf) => (Buffer.from(buf).toString('latin1').match(/MediaBox/g) || []).length;
+
+  // The footer strip (colophon / status bar) is decoration. If it would be the
+  // only thing on the last page, leave it out rather than print a blank sheet.
+  const FOOTER = '.colophon, .foot, .statusbar';
+  const withFooter = countPages(await page.pdf(pdfOpts));
+  const hide = await page.addStyleTag({ content: FOOTER + ' { display: none !important; }' });
+  const withoutFooter = countPages(await page.pdf(pdfOpts));
+  const footerKept = withoutFooter === withFooter;
+  if (footerKept) await hide.evaluate((el) => el.remove());
+  await page.pdf({ ...pdfOpts, path: path.join(ROOT, out) });
+
+  const raw = fs.readFileSync(path.join(ROOT, out), 'latin1');
+  const pages = (raw.match(/MediaBox/g) || []).length;
+  console.log(`  ${job.id.padEnd(10)} → ${out}  (A4 × ${pages}, ${design}${footerKept ? '' : ', footer dropped'})`);
+  await page.close();
+}
+
 (async () => {
-  const wanted = process.argv.slice(2);
+  const args = process.argv.slice(2);
+  const a4 = args.includes('--a4');
+  const wanted = args.filter((a) => a !== '--a4');
+  const run = a4 ? exportA4 : exportEdition;
   const jobs = wanted.length ? EDITIONS.filter((e) => wanted.includes(e.id)) : EDITIONS;
   if (!jobs.length) {
     console.error('No matching editions. Valid ids: ' + EDITIONS.map((e) => e.id).join(', '));
@@ -167,18 +322,18 @@ async function exportEdition(browser, job) {
   const executablePath = resolveChrome();
   console.log('Chrome: ' + (executablePath || '(puppeteer default)'));
   const browser = await puppeteer.launch({ executablePath, headless: 'new' });
-  console.log('Generating ' + jobs.length + ' edition(s):');
+  console.log('Generating ' + jobs.length + ' edition(s)' + (a4 ? ' as A4 print PDFs' : '') + ':');
   for (const job of jobs) {
     if (job.loc) {
       // Location-aware editions export a Riyadh (default name) and a Cairo PDF.
-      await exportEdition(browser, { ...job, locParam: 'riyadh' });
-      await exportEdition(browser, {
+      await run(browser, { ...job, locParam: 'riyadh' });
+      await run(browser, {
         ...job,
         locParam: 'cairo',
         pdf: job.pdf.replace(/_Resume\.pdf$/, '_Cairo_Resume.pdf'),
       });
     } else {
-      await exportEdition(browser, job);
+      await run(browser, job);
     }
   }
   await browser.close();

@@ -4,7 +4,8 @@
   "private": true,
   "description": "Interactive résumé (multiple editions) with HTML → PDF export",
   "scripts": {
-    "pdf": "node scripts/generate-pdf.js"
+    "pdf": "node scripts/generate-pdf.js",
+    "pdf:a4": "node scripts/generate-pdf.js --a4"
   },
   "devDependencies": {
     "puppeteer-core": "^23.0.0"
