@@ -62,12 +62,15 @@ Senior iOS Tech Lead with **11+ years** of experience leading mobile development
 
 - **[📱 View Interactive Resume](https://elgawady14.github.io/ahmad-abduljawad-resume/)** (GitHub Pages) — the live page is the **Founder & CTO, Buraq** edition (copy of [`versions/2026-08-founding-cto/`](./versions/2026-08-founding-cto/))
 - **[📋 Download PDF Resume](./Ahmad_Founding_CTO_Resume.pdf)** · [Cairo PDF](./Ahmad_Founding_CTO_Cairo_Resume.pdf)
+- **🖨️ For printing:** [A4 print PDF](./Ahmad_Founding_CTO_Resume_A4_Print.pdf) · [Cairo](./Ahmad_Founding_CTO_Cairo_Resume_A4_Print.pdf) — real A4 pages tuned for colour print (every edition has one: `…_A4_Print.pdf`)
 - iOS edition: [`versions/2026-07-ios/`](./versions/2026-07-ios/) · [PDF](./versions/2026-07-ios/Ahmad_iOS_Resume.pdf)
 
 ### Targeted editions
 
 Each role family has its own independent, self-contained resume — send the one the posting asks
 for. Every edition exports a Riyadh (default) and a Cairo PDF; see [`versions/`](./versions/).
+Each PDF also has an `…_A4_Print.pdf` twin for paper (multi-page A4, clean white, colour-tuned) —
+regenerate with `npm run pdf:a4`; details in [`PDF_CONVERSION.md`](./PDF_CONVERSION.md#3b-a4-print-pdfs).
 
 | Target role | Edition | PDF |
 |-------------|---------|-----|

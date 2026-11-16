@@ -8,6 +8,7 @@ you change an `index.html`, you regenerate the PDFs with one command.
 > ```bash
 > npm install            # once
 > npm run pdf            # regenerate every PDF after editing any HTML
+> npm run pdf:a4         # regenerate the A4 print PDFs (…_A4_Print.pdf)
 > ```
 
 ---
@@ -44,6 +45,9 @@ the default file (Riyadh) and a `…_Cairo_Resume.pdf` twin.
 
 Every PDF is exported as **one continuous-scroll page** (no page breaks), sized
 to its full content height — a true 1:1 of the web design.
+
+Each edition also has an **A4 print PDF** (`…_A4_Print.pdf`, next to the screen
+PDF) for paper: see [§ 3b](#3b-a4-print-pdfs).
 
 ---
 
@@ -108,6 +112,41 @@ nothing is clipped, then commit the changed `.pdf` files alongside the HTML.
 
 ---
 
+## 3b. A4 print PDFs
+
+The continuous screen PDF is one very tall page, so a printer shrinks it onto a
+single sheet and the text becomes unreadable. For paper, every edition also
+exports `…_A4_Print.pdf` (and `…_Cairo_Resume_A4_Print.pdf` for location-aware
+editions): real A4 pages at full type size, tuned for colour printing.
+
+```bash
+npm run pdf:a4                               # every edition
+node scripts/generate-pdf.js --a4 ios        # one edition (Riyadh + Cairo)
+```
+
+What the A4 mode changes (all in `A4_CSS` in `scripts/generate-pdf.js`; the
+HTML files are untouched):
+
+| | Editorial (root, ios, mobile, cto, …) | Swiss | Terminal editions |
+|---|---|---|---|
+| Rendered from | its own `@media print` rules (full 15px type) | screen layout, scaled to A4 | screen layout, scaled to A4 |
+| Paper | white, grain removed | white, outer frame removed | **light editor theme** (dark theme floods ink) |
+| Colour | darker greys/hairlines, deeper oxblood, photo in full colour | darker greys, photo unfiltered | GitHub-light palette, photo unfiltered |
+| Page 1 | masthead "cover"; first section starts page 2 | flows | flows |
+
+Shared rules: page padding repeats on every page (`box-decoration-break:
+clone`); long entries may continue onto the next page but single bullets,
+cards and headings never split or strand; images render at 2× density. The
+footer strip (colophon / status bar) is dropped only when it would otherwise
+be the sole content of the last page — the run log says `footer dropped`.
+
+**Printing:** A4 · Colour · Scale 100% / "Actual size" (not "Fit to page") ·
+Best quality. Double-sided works well.
+
+After changing any `index.html`, run both `npm run pdf` and `npm run pdf:a4`.
+
+---
+
 ## 4. How it works (and why)
 
 The conversion lives in `scripts/generate-pdf.js`. For each edition it:
@@ -164,12 +203,8 @@ content height.
    `media` to `screen`.
 
 ### Want classic multi-page A4 instead of continuous?
-Replace the per-edition export with:
-```js
-await page.pdf({ path, printBackground: true, format: 'A4', preferCSSPageSize: true });
-```
-(Remove the height-measuring + `@page` injection.) This was the previous
-behaviour; the project intentionally uses continuous scroll now.
+Use the A4 print mode (`npm run pdf:a4`, see [§ 3b](#3b-a4-print-pdfs)). The
+screen PDFs intentionally stay one continuous page.
 
 ---
 
